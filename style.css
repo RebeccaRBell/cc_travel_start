@@ -142,7 +142,10 @@ height: 30px;
   cursor: pointer;
 
 }
+main {
+  min-height: 3000px;
 
+}
 .container {
   /* The destinations are enclosed in an article element that we want to make a grid */
   /* Set the display property to 'grid' and justify the content */
@@ -191,15 +194,16 @@ img {
   background-color:#383F50;
   display: flex;
   flex-direction: row;
-  padding: 20px;
-  height: 400px;
+  align-items: center;
+  height: 500px;
 }
 
 .single-testmonial{
   background-color: #EFF8FD;
-  min-width: 30%;
-  margin: 20px;
-  padding: 10px;
+  grid: 3fr 3fr 3fr;
+  width: 80%;
+  padding: 20px;
+  margin: 10px;
   text-align: center;
   border-radius: 15px;
 
@@ -218,12 +222,12 @@ img {
 }
 
 .footer-widget a:hover {
-   /* Write your code here */
+  text-decoration: underline dotted;
 }
 
 .footer-widget ul li {
   display: flex;
-  line-height: 30px;;
+  line-height: 25px;
 
 }
 
@@ -235,7 +239,47 @@ img {
 /* Media Queries */
 
 @media (max-width: 720px) {
-    /* Add some responsive code here */
-    /* Make the destinations stack on top of each other */
-    /* Make the form input stack on top of each other */
+  body {
+    width: 100%;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  nav {
+    width: 100%;
+    height: 40px;
+
+  }
+.search-form {
+    display: flex;
+    flex-flow: row wrap;
+    
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+  .single-destination{
+    font-size: 12px;
+    padding: 0px;
+  }
+.testimonial-area {
+  height: 900px;
+  font-size: 12px;
+  padding: 0px;
+  margin: 0px;
+}
+.single-testmonial {
+}
+  footer {
+    position: relative;
+    font-size: 12px;
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
 }
